@@ -59,43 +59,43 @@ while True:
     print("3. Actualizar precio")
     print("4. Salir")
 
-    #try:
-    opcion = input("Ingrese opción: ")
-    #except ValueError:
-     #   print("Debe ingresar valores enteros!!")
-
-    if opcion == "1":
-        marca = input("Ingrese marca a consultar: ")
-        stock_marca(marca)
-    elif opcion == "2":
-        try: 
-            p_min = int(input("Ingrese precio mínimo: "))
-            p_max = int(input("Ingrese precio máximo: "))
-            busqueda_precio(p_min, p_max)
-        except ValueError:
-            print("Debe ingresar valores enteros!!")
-    elif opcion == "3":
-        while True:
-            modelo = input("Ingrese modelo a actualizar: ")
-            try:
-                p = int(input("Ingrese precio nuevo: "))
+    try:
+        opcion = int(input("Ingrese opción: "))
+        
+        if opcion == 1:
+            marca = input("Ingrese marca a consultar: ")
+            stock_marca(marca)
+        elif opcion == 2:
+            try: 
+                p_min = int(input("Ingrese precio mínimo: "))
+                p_max = int(input("Ingrese precio máximo: "))
+                busqueda_precio(p_min, p_max)
             except ValueError:
                 print("Debe ingresar valores enteros!!")
-            if actualizar_precio(modelo, p):
-                print("Precio actualizado!!")
-            else:
-                print("El modelo no existe!!")
-            
-            respuesta = input("¿Desea actualizar otro precio (s/n)?")
-            if respuesta == "si":
-                continue
-            else:
-                if respuesta == "no":
-                    break
+        elif opcion == 3:
+            while True:
+                modelo = input("Ingrese modelo a actualizar: ")
+                try:
+                    p = int(input("Ingrese precio nuevo: "))
+                except ValueError:
+                    print("Debe ingresar valores enteros!!")
+                if actualizar_precio(modelo, p):
+                    print("Precio actualizado!!")
+                else:
+                    print("El modelo no existe!!")
+                
+                respuesta = input("¿Desea actualizar otro precio (s/n)?")
+                if respuesta == "si":
+                    continue
+                else:
+                    if respuesta == "no":
+                        break
 
-    elif opcion == "4":
-        print("Programa finalizado")
-        break
-    else:
-        print("Debe ingresar valores enteros!!")
+        elif opcion == 4:
+            print("Programa finalizado")
+            break
+        else:
+            print("Debe seleccionar una opción válida!!")
 
+    except ValueError:
+        print("Debe seleccionar una opción válida!!")
