@@ -54,10 +54,10 @@ def actualizar_precio(modelo, p):
 
 while True:
     print("*** MENU PRINCIPAL ***")
-    print("1. Stock marca")
-    print("2. Búsqueda por precio")
-    print("3. Actualizar precio")
-    print("4. Salir")
+    print("1. Stock marca.")
+    print("2. Búsqueda por precio.")
+    print("3. Actualizar precio.")
+    print("4. Salir.")
 
     try:
         opcion = int(input("Ingrese opción: "))
@@ -92,7 +92,7 @@ while True:
                         break
 
         elif opcion == 4:
-            print("Programa finalizado")
+            print("Programa finalizado.")
             break
         else:
             print("Debe seleccionar una opción válida!!")
