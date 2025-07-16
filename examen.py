@@ -41,9 +41,9 @@ def busqueda_precio(p_min, p_max):
             resultados.append(f"{productos[codigo][0]} - {codigo}")
     
     if resultados:
-        print("Los notebooks entre los precios consultas son: ", sorted(resultados))
+        print("Los notebooks entre los precios consultados son: ", sorted(resultados))
     else:
-        print("No hay notebooks en este rango de precios")
+        print("No hay notebooks en ese rango de precios")
 
 def actualizar_precio(modelo, p):
     if modelo in productos:
